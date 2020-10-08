@@ -35,4 +35,24 @@ function getSmallestPrime(n) {
   return -1;
 }
 
+function getLargestPrime(n) {
+  if (n === 1) {
+    return -1;
+  }
+  if (n === 2) {
+    return 2;
+  }
+  let max = -1;
+  if ((n > 2) & (n % 2 === 0)) {
+    max = 2;
+  }
+  let maxDivisor = Math.floor(Math.sqrt(n));
+  for (let d = 3; d < maxDivisor + 1; d += 2) {
+    if (n % d === 0) {
+      max = d;
+    }
+  }
+  return max;
+}
+
 module.exports = { isPrime, getSmallestPrime };
