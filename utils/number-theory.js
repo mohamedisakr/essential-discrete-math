@@ -47,6 +47,7 @@ function getLargestPrime(n) {
     max = 2;
   }
   let maxDivisor = Math.floor(Math.sqrt(n));
+  // console.log(maxDivisor);
   for (let d = 3; d < maxDivisor + 1; d += 2) {
     if (n % d === 0) {
       max = d;
@@ -55,4 +56,4 @@ function getLargestPrime(n) {
   return max;
 }
 
-module.exports = { isPrime, getSmallestPrime };
+module.exports = { isPrime, getSmallestPrime, getLargestPrime };
