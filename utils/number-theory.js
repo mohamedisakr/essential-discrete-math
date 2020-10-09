@@ -36,23 +36,26 @@ function getSmallestPrime(n) {
 }
 
 function getLargestPrime(n) {
-  if (n === 1) {
-    return -1;
-  }
-  if (n === 2) {
-    return 2;
-  }
+  let num = n;
   let max = -1;
-  if ((n > 2) & (n % 2 === 0)) {
+
+  while (num % 2 === 0) {
     max = 2;
+    num /= 2;
   }
-  let maxDivisor = Math.floor(Math.sqrt(n));
-  // console.log(maxDivisor);
+
+  let maxDivisor = Math.floor(Math.sqrt(num));
   for (let d = 3; d < maxDivisor + 1; d += 2) {
-    if (n % d === 0) {
+    while (num % d === 0) {
       max = d;
+      num /= d;
     }
   }
+
+  if (num > 2) {
+    max = num;
+  }
+
   return max;
 }
 

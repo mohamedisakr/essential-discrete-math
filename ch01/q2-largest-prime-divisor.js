@@ -16,3 +16,15 @@ console.log(max);
 n = 140;
 max = getLargestPrime(n);
 console.log(max);
+
+n = 21;
+max = getLargestPrime(n);
+console.log(max);
+
+n = 25698751364526;
+max = getLargestPrime(n);
+console.log(max);
+
+n = 30031;
+max = getLargestPrime(n);
+console.log(max);
