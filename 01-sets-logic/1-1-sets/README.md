@@ -1,0 +1,11 @@
+- equal sets
+- subset
+- proper subset
+- power set
+- union
+- intersection
+- difference (relative complement)
+- disjoint (pairwise disjoint)
+- complement
+- cartesian product
+- 
